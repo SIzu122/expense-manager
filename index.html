@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>支出管理アプリ</title>
+</head>
+
+<body>
+    <h1>支出管理</h1>
+    <div class="formWhole">
+        <div class="enter">
+            <input id="expenseNameInput" type="text" placeholder="支出名">
+            <input id="amount" type="text" placeholder="金額">
+            <input id="date" type="date" placeholder="日付">
+
+            <select id="category">
+                <option value="">カテゴリを選択してください</option>
+                <option>食費</option>
+                <option>交通費</option>
+                <option>娯楽</option>
+                <option>日用品</option>
+                <option>その他</option>
+            </select>
+        </div>
+
+        <div class="filter">
+            <select id="categoryFilter">
+                <option value="">すべて</option>
+                <option>食費</option>
+                <option>交通費</option>
+                <option>娯楽</option>
+                <option>日用品</option>
+                <option>その他</option>
+            </select>
+
+            <!-- 月で絞り込む -->
+            <input id="monthFilter" type="month">
+
+            <input id="searchInput" type="text" placeholder="支出名で検索">
+
+            <!-- 金額順に並び替える -->
+            <select id="sortFilter">
+                <option value="">並び替えなし</option>
+                <option value="high">金額が高い順</option>
+                <option value="low">金額が低い順</option>
+            </select>
+        </div>
+
+        <div class="button">
+            <button id="addButton">追加</button>
+            <button id="clearButton">全削除</button>
+            <button id="cancelEditButton">編集キャンセル</button>
+        </div>
+    </div>
+
+
+
+    <ul id="expenseList"></ul>
+
+    <div class="text">
+        <p id="message"></p>
+        <p id="total"></p>
+        <p id="count"></p>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
